@@ -8,7 +8,7 @@ Servo tiltServo;
 int tilt=0;
 int pan=0;
 int panSteps=75;
-int tiltSteps=15;
+int tiltSteps=40;
 int panIncrement=1;
 int tiltIncrement=1;
 
@@ -22,7 +22,7 @@ void setup()
 
   tiltServo.attach(9);
   panServo.attach(8);
-  tiltServo.write(0);
+  tiltServo.write(5);
   panServo.write(0);
 
 
@@ -33,7 +33,7 @@ void loop()
 {
 
   delay(2000);
-  for (tilt=0;tilt<tiltIncrement*tiltSteps;tilt+=tiltIncrement)  {
+  for (tilt=1;tilt < 1+ tiltIncrement*tiltSteps;tilt+=tiltIncrement)  {
     tiltServo.write(tilt);
     delay(300);
 
