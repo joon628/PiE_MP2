@@ -4,8 +4,6 @@ import matplotlib.pyplot as plt
 from matplotlib import cm
 from matplotlib.ticker import LinearLocator, FormatStrFormatter
 import numpy as np
-import pandas as pd
-import astropy.coordinates as ac
 
 def retrieve_data():
     arduinoComPort = "/dev/cu.usbmodem14301"
@@ -48,6 +46,7 @@ def plot(pan, depth):
     plt.scatter(pan, depth)
     # Make data.
     # Plot the surface.
+    plt.title("2D plot")
     plt.xlabel("x")
     plt.ylabel("y")
     plt.show()
